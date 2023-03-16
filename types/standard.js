@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   'application/andrew-inset': ['ez'],
   'application/applixware': ['aw'],
   'application/atom+xml': ['atom'],

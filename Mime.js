@@ -1,10 +1,8 @@
-'use strict';
-
 /**
  * @param typeMap [Object] Map of MIME type -> Array[extensions]
  * @param ...
  */
-function Mime() {
+export function Mime() {
   this._types = Object.create(null);
   this._extensions = Object.create(null);
 
@@ -93,5 +91,3 @@ Mime.prototype.getExtension = function(type) {
   type = /^\s*([^;\s]*)/.test(type) && RegExp.$1;
   return type && this._extensions[type.toLowerCase()] || null;
 };
-
-module.exports = Mime;
