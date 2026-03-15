@@ -1,6 +1,3 @@
-<!--
-  -- This file is auto-generated from src/README_js.md. Changes should be made there.
-  -->
 # Mime
 
 A comprehensive, compact MIME type module.
@@ -176,6 +173,3 @@ E.g.
 
     > mime scripts/jquery.js
     application/javascript
-
-----
-Markdown generated from [src/README_js.md](src/README_js.md) by [![RunMD Logo](https://i.imgur.com/h0FVyzU.png)](https://github.com/broofa/runmd)
