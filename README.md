@@ -1,4 +1,6 @@
-# Mime
+# mime
+
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
 A comprehensive, compact MIME type module.
 
@@ -41,8 +43,8 @@ For the full version (800+ MIME types, 1,000+ extensions):
 ```javascript
 const mime = require('mime');
 
-mime.getType('txt');                    // ⇨ 'text/plain'
-mime.getExtension('text/plain');        // ⇨ 'txt'
+mime.getType('txt');                    // 'text/plain'
+mime.getExtension('text/plain');        // 'txt'
 ```
 
 See [Mime API](#mime-api) below for API details.
@@ -110,8 +112,8 @@ const typeMap = {
 
 // Create and use Mime instance
 const myMime = new Mime(typeMap);
-myMime.getType('abc');            // ⇨ 'text/abc'
-myMime.getExtension('text/def');  // ⇨ 'leppard'
+myMime.getType('abc');            // 'text/abc'
+myMime.getExtension('text/def');  // 'leppard'
 ```
 
 If more than one map argument is provided, each map is `define()`ed (see below), in order.
@@ -121,21 +123,21 @@ If more than one map argument is provided, each map is `define()`ed (see below),
 Get mime type for the given path or extension.  E.g.
 
 ```javascript
-mime.getType('js');             // ⇨ 'application/javascript'
-mime.getType('json');           // ⇨ 'application/json'
+mime.getType('js');             // 'application/javascript'
+mime.getType('json');           // 'application/json'
 
-mime.getType('txt');            // ⇨ 'text/plain'
-mime.getType('dir/text.txt');   // ⇨ 'text/plain'
-mime.getType('dir\\text.txt');  // ⇨ 'text/plain'
-mime.getType('.text.txt');      // ⇨ 'text/plain'
-mime.getType('.txt');           // ⇨ 'text/plain'
+mime.getType('txt');            // 'text/plain'
+mime.getType('dir/text.txt');   // 'text/plain'
+mime.getType('dir\\text.txt');  // 'text/plain'
+mime.getType('.text.txt');      // 'text/plain'
+mime.getType('.txt');           // 'text/plain'
 ```
 
 `null` is returned in cases where an extension is not detected or recognized
 
 ```javascript
-mime.getType('foo/txt');        // ⇨ null
-mime.getType('bogus_type');     // ⇨ null
+mime.getType('foo/txt');        // null
+mime.getType('bogus_type');     // null
 ```
 
 ### mime.getExtension(type)
@@ -143,9 +145,9 @@ Get extension for the given mime type.  Charset options (often included in
 Content-Type headers) are ignored.
 
 ```javascript
-mime.getExtension('text/plain');               // ⇨ 'txt'
-mime.getExtension('application/json');         // ⇨ 'json'
-mime.getExtension('text/html; charset=utf8');  // ⇨ 'html'
+mime.getExtension('text/plain');               // 'txt'
+mime.getExtension('application/json');         // 'json'
+mime.getExtension('text/html; charset=utf8');  // 'html'
 ```
 
 ### mime.define(typeMap[, force = false])
@@ -161,8 +163,8 @@ extension that is already assigned to another type.  Passing `true` for the
 ```javascript
 mime.define({'text/x-abc': ['abc', 'abcd']});
 
-mime.getType('abcd');            // ⇨ 'text/x-abc'
-mime.getExtension('text/x-abc')  // ⇨ 'abc'
+mime.getType('abcd');            // 'text/x-abc'
+mime.getExtension('text/x-abc')  // 'abc'
 ```
 
 ## Command Line
